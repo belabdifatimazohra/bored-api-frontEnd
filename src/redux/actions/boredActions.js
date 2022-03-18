@@ -1,3 +1,7 @@
+// Init with local storage
+export const initFavorite = (payload) => {
+  return { type: "INIT", payload };
+};
 // Add to the favorite list  of activities
 export const addToFavorite = (payload) => {
     return { type: "ADD", payload };

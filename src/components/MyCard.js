@@ -2,8 +2,8 @@ import { React, useState, useEffect } from "react";
 import { Button, Card, Form } from "react-bootstrap";
 import {RiHeart3Fill} from 'react-icons/ri';
 import axios from "axios";
-import {addToFavorite, randomActivity} from '../redux/actions/boredActions'
-import { useDispatch, useSelector } from "react-redux";
+import {addToFavorite} from '../redux/actions/boredActions'
+import { useDispatch } from "react-redux";
 
 function MyCard() {
   // dispatch info state
@@ -22,6 +22,7 @@ function MyCard() {
       `http://www.boredapi.com/api/activity?type=${typeActivity}`
     );
     setRandomActivity(response.data);
+    setToggleHeart(false);
     console.log(typeActivity);
   };
 
@@ -31,12 +32,6 @@ function MyCard() {
     // Change Color
     setToggleHeart(!toggleHeart);
     dispatch(addToFavorite({ id: randomActivity.key, activity: randomActivity.activity, check: false }));
-  //    // get the state favoriteActivities from the store
-  // const favoriteActivities = useSelector((state) => state.favoriteActivities);
-  // console.log(favoriteActivities);
-  //   // Add to local storage
-  //   localStorage.setItem("favoriteActivities", favoriteActivities)
-    
   };
   // Load Random activity
   useEffect(() => {
