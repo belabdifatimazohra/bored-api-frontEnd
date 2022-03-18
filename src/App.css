@@ -3,6 +3,9 @@
   width: 20%;
   height: 20%;
 }
+.navbar-nav a, .navbar-brand a{
+  text-decoration: none;
+}
 .classA{
   text-decoration: none;
   color: #A2D5AB;
