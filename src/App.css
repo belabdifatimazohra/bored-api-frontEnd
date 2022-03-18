@@ -3,9 +3,9 @@
   width: 20%;
   height: 20%;
 }
-a{
+.classA{
   text-decoration: none;
-  color: #051367;
+  color: #A2D5AB;
   font-weight: 800;
   font-size: 24px;
 }
@@ -15,4 +15,36 @@ a{
   font-weight: 800;
   font-size: 24px;
   font-style: italic;
+}
+
+.main{
+  background-color: #A2D5AB;
+  height: 90vh;
+  display: flex;
+  justify-content:center;
+}
+.activityCard{
+  text-align: center;
+  margin: auto;
+}
+
+.heart{
+  font-size: 35px;
+  color:rgb(182, 173, 173);
+  margin-top: 7px;
+   width: 70px;
+   outline: none;
+   text-transform: uppercase;
+   cursor: pointer;
+   font-weight: bold;
+}
+
+.active {
+    color: rgb(192, 39, 39);
+   }
+.favorite{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

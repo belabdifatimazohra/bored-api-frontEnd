@@ -1,6 +1,6 @@
 import React from "react";
 
-function Navbar(props) {
+function NavBar(props) {
   return (
     <div>
       <>
@@ -49,4 +49,4 @@ function Navbar(props) {
   );
 }
 
-export default Navbar;
+export default NavBar;

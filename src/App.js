@@ -11,7 +11,7 @@ function App() {
         {/* Home page */}
         <Route path="/" element={<Home />} />
         {/* Favorite page */}
-        <Route path="favorite" element={<Favorite />} />
+        <Route path="/favorite" element={<Favorite />} />
       </Routes>
 
     </div>
