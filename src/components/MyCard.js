@@ -4,6 +4,7 @@ import {RiHeart3Fill} from 'react-icons/ri';
 import axios from "axios";
 import {addToFavorite} from '../redux/actions/boredActions'
 import { useDispatch } from "react-redux";
+import ActivityType from './ActivityType'
 
 function MyCard() {
   // dispatch info state
@@ -50,21 +51,7 @@ function MyCard() {
         </Card.Body>
       )}
       {/* Activity Types */}
-      <Form.Select aria-label="Default select example"
-         
-          onChange={e => handleTypeChange(e)}>
-        <option>Select Activity Type</option>
-        <option value="education">Education</option>
-        <option value="recreational">Recreational</option>
-        <option value="social">Social</option>
-        <option value="diy">Diy</option>
-        <option value="charity">Charity</option>
-        <option value="cooking">Cooking</option>
-        <option value="relaxation">Relaxation</option>
-        <option value="music">Music</option>
-        <option value="busywork">Busywork</option>
-
-      </Form.Select>
+      <ActivityType handleTypeChange = {handleTypeChange} />
       <Button
         style={{ background: "#D82148", border: "0", fontWeight: "bold" }}
         onClick={getRandomActivity}
