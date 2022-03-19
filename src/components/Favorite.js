@@ -7,6 +7,7 @@ import { Card } from "react-bootstrap";
 import { RiDeleteBinFill } from "react-icons/ri";
 import { useDispatch } from "react-redux";
 import { deletFromFavorite } from "../redux/actions/boredActions";
+import ActivityType from "./ActivityType";
 
 function Favorite() {
   // get the state favoriteActivities from the store
@@ -14,6 +15,8 @@ function Favorite() {
   let favoriteActivities = fav;
   // dispatch info state
   const dispatch = useDispatch();
+  // activity type state
+  const [typeActivity, setTypeActivity] = useState();
 
   // delete favorite state
   const [toggleDelete, setToggleDelete] = useState(false);
@@ -24,8 +27,9 @@ function Favorite() {
   };
   // Load Random activity
   useEffect(() => {
-    favoriteActivities = JSON.parse(localStorage.getItem("favorites"));
-  }, [toggleDelete]);
+    favoriteActivities = JSON.parse(localStorage.getItem("favorites")).filter(
+      (activity) => activity.type !== typeActivity);
+  }, [toggleDelete,typeActivity]);
   return (
     <div>
       <Navbar collapseOnSelect>
