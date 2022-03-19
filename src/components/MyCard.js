@@ -23,7 +23,6 @@ function MyCard() {
     );
     setRandomActivity(response.data);
     setToggleHeart(false);
-    console.log(typeActivity);
   };
 
   
@@ -31,7 +30,7 @@ function MyCard() {
   const addFavorite = (e) => {
     // Change Color
     setToggleHeart(!toggleHeart);
-    dispatch(addToFavorite({ id: randomActivity.key, activity: randomActivity.activity, check: false }));
+    dispatch(addToFavorite({ id: randomActivity.key, activity: randomActivity.activity,type: randomActivity.type }));
   };
   // Load Random activity
   useEffect(() => {
@@ -41,8 +40,10 @@ function MyCard() {
     <Card style={{ width: "18rem", height: "25%" }}>
       {randomActivity && (
         <Card.Body className="activityCard">
+          <div>
           <Card.Title>{randomActivity.activity} </Card.Title>
           <Card.Text>{randomActivity.type}</Card.Text>
+          </div>
           <RiHeart3Fill className="heart" className={
             toggleHeart ? 'heart active' : 'heart'
           } onClick = {addFavorite}/>

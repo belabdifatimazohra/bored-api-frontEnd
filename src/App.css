@@ -1,53 +1,64 @@
 /* Logo */
-.logo{
+.logo {
   width: 20%;
   height: 20%;
 }
-.navbar-nav a, .navbar-brand a{
+.navbar-nav a,
+.navbar-brand a {
   text-decoration: none;
 }
-.classA{
+.classA {
   text-decoration: none;
-  color: #A2D5AB;
+  color: #a2d5ab;
   font-weight: 800;
   font-size: 24px;
 }
 
-.boredMe{
-  color: #D82148;
+.boredMe {
+  color: #d82148;
   font-weight: 800;
   font-size: 24px;
   font-style: italic;
 }
 
-.main{
-  background-color: #A2D5AB;
+.main {
+  background-color: #a2d5ab;
   height: 90vh;
   display: flex;
-  justify-content:center;
+  justify-content: center;
 }
-.activityCard{
-  text-align: center;
-  margin: auto;
+.activityCard {
+  display: flex;
+  align-items: center;
+
+  justify-content:space-between;
+  
 }
 
-.heart{
+.heart {
   font-size: 35px;
-  color:rgb(182, 173, 173);
+  color: rgb(182, 173, 173);
   margin-top: 7px;
-   width: 70px;
-   outline: none;
-   text-transform: uppercase;
-   cursor: pointer;
-   font-weight: bold;
+  width: 70px;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-.active {
-    color: rgb(192, 39, 39);
-   }
-.favorite{
+.active, .delete{
+  color: rgb(192, 39, 39);
+}
+
+.favorite {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  background-color: #a2d5ab;
+  height: 85vh;
+  padding: 30px;
+}
+
+.delete{
+  font-size:35px;
 }
