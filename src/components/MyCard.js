@@ -19,7 +19,7 @@ function MyCard() {
   // Get the random activity with axios
   const getRandomActivity = async () => {
     const response = await axios.get(
-      `http://www.boredapi.com/api/activity?type=${typeActivity}`
+      `https://www.boredapi.com/api/activity?type=${typeActivity}`
     );
     setRandomActivity(response.data);
     setToggleHeart(false);
