@@ -19,7 +19,7 @@ function MyCard() {
   // Get the random activity with axios
   const getRandomActivity = async () => {
     const response = await axios.get(
-      `https://www.boredapi.com/api/activity?type=${typeActivity}`
+      `http://www.boredapi.com/api/activity?type=${typeActivity}`
     );
     setRandomActivity(response.data);
     setToggleHeart(false);
@@ -49,9 +49,7 @@ function MyCard() {
             <Card.Title>{randomActivity.activity} </Card.Title>
             <Card.Text>{randomActivity.type}</Card.Text>
           </div>
-          <RiHeart3Fill
-            className="heart"
-            className={toggleHeart ? "heart active" : "heart"}
+          <RiHeart3Fill   className= {`heart ${toggleHeart ? "active" : ""}`}
             onClick={addFavorite}
           />
         </Card.Body>
